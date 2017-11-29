@@ -5,6 +5,9 @@
  */
 package SolucionExamen2017;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  *
  * @author hernan
@@ -12,6 +15,9 @@ package SolucionExamen2017;
 public class Arbol {
     
     private Nodo raiz;
+    private ArrayList<Obra> lista = new ArrayList<>();
+    Stack pila = new Stack();
+    
 
     public Arbol() {
     }
@@ -32,8 +38,59 @@ public class Arbol {
             
             postOrden(n.getHijoIzq());
             postOrden(n.getHijoDer());
-            System.out.print(" "+ n.getDato());
+            
+            if (n.getDato().getAdjudicacion() < 2015) {
+                lista.add(n.getDato());
+            }
+            
+            System.out.println(" "+ n.getDato().getCodigo()+" "+ n.getDato().getNombreEncargado());
+           
+            
         }
+    }
+
+    public Nodo getRaiz() {
+        return raiz;
+    }
+
+    public void setRaiz(Nodo raiz) {
+        this.raiz = raiz;
+    }
+
+    public ArrayList getLista() {
+        return lista;
+    }
+
+    public void setLista(ArrayList lista) {
+        this.lista = lista;
+    }
+     
+     
+    public void imprimirLista()
+    {
+        for (Obra ob  : lista) {
+            
+            System.out.println(ob.getCodigo()+" "+ob.getValorObra());
+        }
+    }
+    
+    
+    
+    
+    public void llenarPila(Obra o)
+    {
+           
+                pila.push(o);
+        
+         
+    }
+    
+    public void mostrarPila()
+    {
+        
+            System.out.println(pila);
+        
+        
     }
     
 }

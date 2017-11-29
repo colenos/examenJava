@@ -11,21 +11,21 @@ import Arboles.*;
  * @author hernan
  */
 public class Nodo {
-     private int dato;
+    private Obra dato;
     private Nodo hijoIzq;
     private Nodo hijoDer;
 
-    public Nodo(int dato) {
+    public Nodo(Obra dato) {
         this.dato = dato;
         this.hijoIzq = null;
         this.hijoDer = null;
     }
 
-    public int getDato() {
+    public Obra getDato() {
         return dato;
     }
 
-    public void setDato(int dato) {
+    public void setDato(Obra dato) {
         this.dato = dato;
     }
 
