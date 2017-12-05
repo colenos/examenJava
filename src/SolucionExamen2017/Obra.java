@@ -5,10 +5,7 @@
  */
 package SolucionExamen2017;
 
-/**
- *
- * @author hernan
- */
+
 public class Obra {
     
     private int codigo;

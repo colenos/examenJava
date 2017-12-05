@@ -4,12 +4,7 @@
  */
 package SolucionExamen2017;
 
-import Arboles.*;
 
-/**
- *
- * @author hernan
- */
 public class Nodo {
     private Obra dato;
     private Nodo hijoIzq;

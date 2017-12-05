@@ -8,10 +8,7 @@ package SolucionExamen2017;
 import java.util.ArrayList;
 import java.util.Stack;
 
-/**
- *
- * @author hernan
- */
+
 public class Arbol {
     
     private Nodo raiz;

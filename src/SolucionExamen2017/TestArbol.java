@@ -7,47 +7,40 @@ package SolucionExamen2017;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author hernan
- */
+
 public class TestArbol {
 
     public static void main(String[] args) {
 
         Arbol ab = new Arbol();
-        Obra o1 = new Obra(123, "Juan", "casa", 2012,2000);
-        Obra o2 = new Obra(456, "Juanito", "casa", 2013,3000);
-        Obra o3 = new Obra(789, "Juana", "casa", 2012,4000);
-        Obra o4 = new Obra(111, "Pedro", "casa", 2016,5000);
-        Obra o5 = new Obra(222, "Maria", "casa", 2017,6000);
+        Obra obj1 = new Obra(111, "Pedro", "Casa", 2013,3000);
+        Obra obj2 = new Obra(222, "Juan", "Casa", 2014,4000);
+        Obra obj3 = new Obra(333, "Diego", "Casa", 2015,5000);
+        Obra obj4 = new Obra(444, "Alexis", "Casa", 2012,2000);
+        Obra obj5 = new Obra(555, "Maria", "Casa", 2016,5000);
 
-        Nodo n1 = new Nodo(o1);
-        Nodo n2 = new Nodo(o2);
-        Nodo n3 = new Nodo(o3);
-        Nodo n4 = new Nodo(o4);
-        Nodo n5 = new Nodo(o5);
+        Nodo n1 = new Nodo(obj1);
+        Nodo n2 = new Nodo(obj2);
+        Nodo n3 = new Nodo(obj3);
+        Nodo n4 = new Nodo(obj4);
+        Nodo n5 = new Nodo(obj5);
 
         n1.setHijoDer(n3);
         n1.setHijoIzq(n2);
         n2.setHijoIzq(n4);
         n2.setHijoDer(n5);
         
-//        
-//           1
-//        2     3
-//      4   5
 
     ab.setRaiz(n1);
     System.out.println("POSTORDEN");
     ab.postOrden();
     ab.imprimirLista();
     
-   ab.llenarPila(o1);
-   ab.llenarPila(o2);
-   ab.llenarPila(o3);
-   ab.llenarPila(o4);
-   ab.llenarPila(o5);
+   ab.llenarPila(obj1);
+   ab.llenarPila(obj2);
+   ab.llenarPila(obj3);
+   ab.llenarPila(obj4);
+   ab.llenarPila(obj5);
    
    ab.mostrarPila();
 
