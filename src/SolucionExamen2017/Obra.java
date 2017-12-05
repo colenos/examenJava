@@ -75,6 +75,11 @@ public class Obra {
     public void setValorObra(int valorObra) {
         this.valorObra = valorObra;
     }
+
+    @Override
+    public String toString() {
+        return "Obra{" + "codigo=" + codigo + ", nombreEncargado=" + nombreEncargado + ", tipo=" + tipo + ", adjudicacion=" + adjudicacion + ", valorObra=" + valorObra + '}';
+    }
     
     
     
